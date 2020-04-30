@@ -1,0 +1,12 @@
+{% extends 'facebooks/base.html' %}
+
+{% block content %}
+<ul>
+{% for topic in topics %}
+    <li>
+    <a href="{% url 'facebooks:topic' topic.id %}">{{topic}} </a>
+    </li>
+{% endfor %}
+</ul>
+    <a href="{% url 'facebooks:new_topic' %}">New TOPIC</a>
+{% endblock content %}
